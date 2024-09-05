@@ -15,8 +15,8 @@ module.exports = {
       current: "currentColor",
       transparent: "transparent",
       white: "#FFFFFF",
-      black: "#090E34",
-      dark: "#1D2144",
+      black: "#0b5586",
+      dark: "#003b65",
       primary: "#4A6CF7",
       yellow: "#FBB040",
       "body-color": "#959CB1",
@@ -45,6 +45,22 @@ module.exports = {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
         one: "0px 2px 3px rgba(7, 7, 77, 0.05)",
         sticky: "inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)",
+      },
+      animation: {
+        "gradient-x": "gradient-x 5s ease infinite",
+      },
+      keyframes: {
+        "gradient-x": {
+          "0%": {
+            "background-position": "0% 50%",
+          },
+          "50%": {
+            "background-position": "100% 50%",
+          },
+          "100%": {
+            "background-position": "0% 50%",
+          },
+        },
       },
     },
   },

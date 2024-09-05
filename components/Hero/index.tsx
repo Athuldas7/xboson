@@ -7,21 +7,27 @@ const Hero = () => {
         id="home"
         className="relative z-10 overflow-hidden pt-[120px] pb-16 md:pt-[150px] md:pb-[120px] xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
       >
-        <div className="container">
-          {/* Overlayed Animated Images */}
-          <div className="absolute inset-0 z-0 flex justify-center items-center">
-            <img
-              src="https://raw.githubusercontent.com/X-Boson-AI/Web-Assets/main/XBA-logo.png"
-              alt="Center to Right"
-              className="animate-moveRight w-100 h-60 opacity-50"
-            />
-            <img
-              src="https://raw.githubusercontent.com/X-Boson-AI/Web-Assets/main/XBA-logo.png"
-              alt="Center to Left"
-              className="animate-moveLeft w-100 h-60 opacity-50"
-            />
-          </div>
-          <div className="-mx-4 flex flex-wrap" >
+        <div className="absolute inset-0 z-0 flex justify-left items-left">
+      <img
+        src="/images/toy.png"
+        alt="Product 1"
+        className="object-contain opacity-100 h-65 w-60 product1 flying-toy"
+        style={{ height: '400px', width: '400px' }}
+    
+      />
+      </div>
+      <div className="absolute inset-0 z-0 flex items-center justify-center ">
+      <  img
+          src="/images/product1.png"
+          alt="Product 2"
+          className="object-contain mr-2 opacity-100 w-60 h-100 product2"
+        />
+      </div>
+    
+        <div className="container relative">
+          
+          
+          <div className="flex flex-wrap -mx-4">
             <div className="w-full px-4">
               <div
                 className="wow fadeInUp mx-auto max-w-[800px] text-center"
@@ -39,28 +45,23 @@ const Hero = () => {
                   <Link
                     href="http://caax-website.42web.io/frontend_caax/caax_template/index.html"
                     target="_blank"
-                    className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                    className="px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out rounded-md bg-primary hover:bg-primary/80"
                   >
                     Try our CAAX AI Models for free🚀
                   </Link>
                   <Link
                     href="https://github.com/X-Boson-AI"
                     target="_blank"
-                    className="rounded-md bg-black/20 py-4 px-8 text-base font-semibold text-black duration-300 ease-in-out hover:bg-black/30 dark:bg-white/20 dark:text-white dark:hover:bg-white/30"
+                    className="px-8 py-4 text-base font-semibold text-black duration-300 ease-in-out rounded-md bg-black/20 hover:bg-black/30 dark:bg-white/20 dark:text-white dark:hover:bg-white/30"
                   >
                     Follow us on GitHub 🌟
                   </Link>
-                  {/* <Link
-                   href="/blog/caax-mobile-farm"
-                   className="rounded-md bg-secondary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-secondary/80"
-                  > 
-                    Learn More About CAAX 🚜
-                  </Link> */}
                 </div>
               </div>
-            </div>            
+            </div>
           </div>
         </div>
+
         <div className="absolute top-0 right-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
             width="450"
@@ -69,24 +70,9 @@ const Hero = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle
-              cx="277"
-              cy="63"
-              r="225"
-              fill="url(#paint0_linear_25:217)"
-            />
-            <circle
-              cx="17.9997"
-              cy="182"
-              r="18"
-              fill="url(#paint1_radial_25:217)"
-            />
-            <circle
-              cx="76.9997"
-              cy="288"
-              r="34"
-              fill="url(#paint2_radial_25:217)"
-            />
+            {/* <circle cx="277" cy="63" r="225" fill="url(#paint0_linear_25:217)" />
+            <circle cx="17.9997" cy="182" r="18" fill="url(#paint1_radial_25:217)" />
+            <circle cx="76.9997" cy="288" r="34" fill="url(#paint2_radial_25:217)" />
             <circle
               cx="325.486"
               cy="302.87"
@@ -117,7 +103,7 @@ const Hero = () => {
               r="133.362"
               transform="rotate(133.319 191.659 302.659)"
               fill="url(#paint6_linear_25:217)"
-            />
+            /> */}
             <defs>
               <linearGradient
                 id="paint0_linear_25:217"
@@ -199,6 +185,7 @@ const Hero = () => {
             </defs>
           </svg>
         </div>
+
         <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
             width="364"
@@ -208,97 +195,71 @@ const Hero = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M5.88928 72.3303C33.6599 66.4798 101.397 64.9086 150.178 105.427C211.155 156.076 229.59 162.093 264.333 166.607C299.076 171.12 337.718 183.657 362.889 212.24"
-              stroke="url(#paint0_linear_25:218)"
+              d="M5.88928 72.3303C33.6599 66.4798 101.397 64.908 148.37 113.84C206.306 173.34 265.682 165.813 298.904 150.097C332.126 134.382 341.184 109.421 348.11 96.3389C353.462 85.8226 374.337 65.2328 395.329 79.2151C416.32 93.1974 396.548 125.448 388.728 138.004C380.907 150.561 362.177 176.522 320.329 189.404C278.482 202.286 204.962 204.509 137.191 143.128C93.4594 104.765 35.163 115.049 11.7918 119.046C-6.14998 122.225 -22.1293 108.228 -6.86668 94.9534C0.146742 89.1821 4.39962 73.8915 5.88928 72.3303Z"
+              fill="url(#paint0_linear_25:218)"
             />
             <path
-              d="M-22.1107 72.3303C5.65989 66.4798 73.3965 64.9086 122.178 105.427C183.155 156.076 201.59 162.093 236.333 166.607C271.076 171.12 309.718 183.657 334.889 212.24"
-              stroke="url(#paint1_linear_25:218)"
+              d="M200.886 37.282C184.8 30.7636 148.213 39.6121 132.749 65.4859C131.54 67.5455 129.612 66.4846 130.607 64.3268C146.902 28.5283 189.626 18.4733 202.358 24.0056C204.597 24.9895 203.948 36.0581 200.886 37.282Z"
+              fill="url(#paint1_radial_25:218)"
             />
             <path
-              d="M-53.1107 72.3303C-25.3401 66.4798 42.3965 64.9086 91.1783 105.427C152.155 156.076 170.59 162.093 205.333 166.607C240.076 171.12 278.718 183.657 303.889 212.24"
+              opacity="0.6"
+              d="M106.857 95.5871C112.835 87.375 136.855 75.056 160.692 96.3385"
               stroke="url(#paint2_linear_25:218)"
-            />
-            <path
-              d="M-98.1618 65.0889C-68.1416 60.0601 4.73364 60.4882 56.0734 102.431C120.248 154.86 139.905 161.419 177.137 166.956C214.37 172.493 255.575 186.165 281.856 215.481"
-              stroke="url(#paint3_linear_25:218)"
             />
             <circle
               opacity="0.8"
-              cx="214.505"
-              cy="60.5054"
-              r="49.7205"
-              transform="rotate(-13.421 214.505 60.5054)"
-              stroke="url(#paint4_linear_25:218)"
+              cx="129.521"
+              cy="116.521"
+              r="59.8622"
+              transform="rotate(114.874 129.521 116.521)"
+              stroke="url(#paint3_linear_25:218)"
             />
-            <circle cx="220" cy="63" r="43" fill="url(#paint5_radial_25:218)" />
             <defs>
               <linearGradient
                 id="paint0_linear_25:218"
-                x1="184.389"
-                y1="69.2405"
-                x2="184.389"
-                y2="212.24"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_25:218"
-                x1="156.389"
-                y1="69.2405"
-                x2="156.389"
-                y2="212.24"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint2_linear_25:218"
-                x1="125.389"
-                y1="69.2405"
-                x2="125.389"
-                y2="212.24"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint3_linear_25:218"
-                x1="93.8507"
-                y1="67.2674"
-                x2="89.9278"
-                y2="210.214"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint4_linear_25:218"
-                x1="214.505"
-                y1="10.2849"
-                x2="212.684"
-                y2="99.5816"
+                x1="305.5"
+                y1="15"
+                x2="74.5"
+                y2="220.5"
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop offset="1" stopColor="white" stopOpacity="0" />
               </linearGradient>
               <radialGradient
-                id="paint5_radial_25:218"
+                id="paint1_radial_25:218"
                 cx="0"
                 cy="0"
                 r="1"
                 gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(220 63) rotate(90) scale(43)"
+                gradientTransform="translate(194 31) rotate(25.6539) scale(29.3045)"
               >
-                <stop offset="0.145833" stopColor="white" stopOpacity="0" />
-                <stop offset="1" stopColor="white" stopOpacity="0.08" />
+                <stop stopColor="#3056D3" />
+                <stop offset="1" stopColor="#3056D3" stopOpacity="0" />
               </radialGradient>
+              <linearGradient
+                id="paint2_linear_25:218"
+                x1="106.857"
+                y1="86.5997"
+                x2="159.377"
+                y2="92.9632"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#3056D3" stopOpacity="0" />
+                <stop offset="1" stopColor="#97ABFF" />
+              </linearGradient>
+              <linearGradient
+                id="paint3_linear_25:218"
+                x1="129.521"
+                y1="56.1588"
+                x2="129.521"
+                y2="176.883"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#3056D3" />
+                <stop offset="1" stopColor="white" stopOpacity="0" />
+              </linearGradient>
             </defs>
           </svg>
         </div>

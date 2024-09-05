@@ -1,35 +1,59 @@
 "use client";
 
+import { useState, useRef } from "react";
 import Image from "next/image";
-import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 
-import ModalVideo from "react-modal-video";
-
 const Video = () => {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const videoRef = useRef(null);
+
+  const handleVideoOpen = () => {
+    setIsOpen(true);
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
+  const handleVideoClose = () => {
+    setIsOpen(false);
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  };
+
+  const handleVideoEnd = () => {
+    handleVideoClose();
+  };
 
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
-      <div className="container">
+      <div className="container mt-5">
         <SectionTitle
-          title="We are ready to help"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Product Video"
+          paragraph=""
           center
           mb="80px"
         />
 
-        <div className="-mx-4 flex flex-wrap">
+        <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4">
             <div
               className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
               data-wow-delay=".15s"
             >
-              <div className="relative aspect-[77/40] items-center justify-center">
-                <Image src="/images/video/video.jpg" alt="video image" fill />
-                <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
+              <div className="relative aspect-[16/9]">
+                <Image
+                  src="/images/video/video1.png"
+                  alt="video thumbnail"
+                  fill
+                  onClick={handleVideoOpen}
+                  className="cursor-pointer"
+                />
+                <div className="absolute top-0 right-0 flex items-center justify-center w-full h-full">
                   <button
-                    onClick={() => setOpen(true)}
+                    onClick={handleVideoOpen}
                     className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
                   >
                     <svg
@@ -48,18 +72,27 @@ const Video = () => {
         </div>
       </div>
 
-      <ModalVideo
-        channel="youtube"
-        autoplay={true}
-        start={true}
-        isOpen={isOpen}
-        videoId="L61p2uyiMSo"
-        onClose={() => setOpen(false)}
-      />
-
-      <div className="absolute bottom-0 left-0 right-0 z-[-1]">
-        <img src="/images/video/shape.svg" alt="shape" className="w-full" />
-      </div>
+      {isOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
+          <div className="relative w-[90%] max-w-[800px]">
+            <video
+              ref={videoRef}
+              src="/videos/caax.mp4"
+              className="w-full rounded-lg"
+              controls={false}
+              onEnded={handleVideoEnd}
+              autoPlay
+              muted
+            />
+            <button
+              onClick={handleVideoClose}
+              className="absolute p-2 text-white bg-black bg-opacity-50 rounded-full top-2 right-2"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

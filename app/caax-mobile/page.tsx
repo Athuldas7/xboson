@@ -7,18 +7,17 @@ const BlogDetailsPage = () => {
     <>
       <section className="pt-[150px] pb-[120px]">
         <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-center">
+          <div className="flex flex-wrap justify-center -mx-4">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h2 className="-mb-10 text-center text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
+                <h2 className="-mb-10 text-3xl font-bold leading-tight text-center text-black dark:text-white sm:text-4xl sm:leading-tight">
                   CAAX - Mobile Application
                 </h2>
-
                 <div>
-                  <div className="-mb-12 w-full overflow-hidden rounded">
+                  <div className="w-full mt-10 -mb-10 overflow-hidden rounded">
                     <div className="relative aspect-[1/1] w-full sm:aspect-[97/97]">
                       <Image
-                        src="/images/blog/ap.png"
+                        src="/images/blog/app.png"
                         alt="image"
                         fill
                         className="object-cover object-center"
@@ -64,8 +63,8 @@ const BlogDetailsPage = () => {
                     way agriculture operates.
                   </p>
 
-                  <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
-                    <p className="text-center text-base font-medium italic text-body-color">
+                  <div className="relative z-10 p-8 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 md:p-9 lg:p-8 xl:p-9">
+                    <p className="text-base italic font-medium text-center text-body-color">
                       Join us in this journey towards a more sustainable and
                       technologically advanced agricultural future.
                     </p>

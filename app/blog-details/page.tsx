@@ -1,5 +1,6 @@
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
+import blogData from "@/components/Blog/blogData";
 import Image from "next/image";
 
 const BlogDetailsPage = () => {
@@ -7,18 +8,18 @@ const BlogDetailsPage = () => {
     <>
       <section className="pt-[150px] pb-[120px]">
         <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-center">
+          <div className="flex flex-wrap justify-center -mx-4">
             <div className="w-full px-4 lg:w-8/12">
               <div>
                 <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
                   10 amazing sites to download stock photos & digital assets for
-                  free
+                  free  
                 </h2>
-                <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
+                <div className="flex flex-wrap items-center justify-between pb-4 mb-10 border-b border-body-color border-opacity-10 dark:border-white dark:border-opacity-10">
                   <div className="flex flex-wrap items-center">
-                    <div className="mr-10 mb-5 flex items-center">
+                    <div className="flex items-center mb-5 mr-10">
                       <div className="mr-4">
-                        <div className="relative h-10 w-10 overflow-hidden rounded-full">
+                        <div className="relative w-10 h-10 overflow-hidden rounded-full">
                           <Image
                             src="/images/blog/author-02.png"
                             alt="author"
@@ -29,12 +30,12 @@ const BlogDetailsPage = () => {
                       <div className="w-full">
                         <h4 className="mb-1 text-base font-medium text-body-color">
                           By
-                          <span>Musharof Chy</span>
+                          <span>Musharof Chy</span> 
                         </h4>
                       </div>
                     </div>
-                    <div className="mb-5 flex items-center">
-                      <p className="mr-5 flex items-center text-base font-medium text-body-color">
+                    <div className="flex items-center mb-5">
+                      <p className="flex items-center mr-5 text-base font-medium text-body-color">
                         <span className="mr-3">
                           <svg
                             width="15"
@@ -55,7 +56,7 @@ const BlogDetailsPage = () => {
                         </span>
                         12 Jan 2024
                       </p>
-                      <p className="mr-5 flex items-center text-base font-medium text-body-color">
+                      <p className="flex items-center mr-5 text-base font-medium text-body-color">
                         <span className="mr-3">
                           <svg
                             width="18"
@@ -89,7 +90,7 @@ const BlogDetailsPage = () => {
                   <div className="mb-5">
                     <a
                       href="#0"
-                      className="inline-flex items-center justify-center rounded-full bg-primary py-2 px-4 text-sm font-semibold text-white"
+                      className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white rounded-full bg-primary"
                     >
                       Design
                     </a>
@@ -101,7 +102,7 @@ const BlogDetailsPage = () => {
                     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                     occaecat cupidatat.
                   </p>
-                  <div className="mb-10 w-full overflow-hidden rounded">
+                  <div className="w-full mb-10 overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                       <Image
                         src="/images/blog/blog-details-02.jpg"
@@ -125,14 +126,14 @@ const BlogDetailsPage = () => {
                   </p>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     Semper auctor neque vitae tempus quam pellentesque nec.
-                    <span className="text-primary underline dark:text-white">
+                    <span className="underline text-primary dark:text-white">
                       Amet dictum sit amet justo
                     </span>
                     donec enim diam. Varius sit amet mattis vulputate enim nulla
                     aliquet porttitor. Odio pellentesque diam volutpat commodo
                     sed.
                   </p>
-                  <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
+                  <h3 className="mb-10 font-bold leading-tight text-black font-xl dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                     Digital marketplace for Ui/Ux designers.
                   </h3>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
@@ -140,7 +141,7 @@ const BlogDetailsPage = () => {
                     dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                     mattis vulputate cupidatat.
                   </p>
-                  <ul className="mb-10 list-inside list-disc text-body-color">
+                  <ul className="mb-10 list-disc list-inside text-body-color">
                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
                       Consectetur adipiscing elit in voluptate velit.
                     </li>
@@ -154,8 +155,8 @@ const BlogDetailsPage = () => {
                       Ligula ullamcorper malesuada proin
                     </li>
                   </ul>
-                  <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
-                    <p className="text-center text-base font-medium italic text-body-color">
+                  <div className="relative z-10 p-8 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 md:p-9 lg:p-8 xl:p-9">
+                    <p className="text-base italic font-medium text-center text-body-color">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod incididunt utionals labore et dolore magna
                       aliqua. Quis lobortis scelerisque fermentum, The Neque ut

@@ -4,15 +4,15 @@ import blogData from "./blogData";
 
 const Blog = () => {
   return (
-    <section id="blog" className="bg-primary/5 py-16 md:py-20 lg:py-28">
+    <section id="blog" className="py-16 bg-primary/5 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           title="Our Latest Blogs"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Stay updated with our latest insights, tips, and trends in the industry. Our blogs offer valuable knowledge and practical advice to help you stay ahead. Dive in to explore topics that matter most to you!"
           center
         />
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3">
+        <div className="grid grid-cols-1 shadow-xl gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3">
           {blogData.map((blog) => (
             <div key={blog.id} className="w-full">
               <SingleBlog blog={blog} />
